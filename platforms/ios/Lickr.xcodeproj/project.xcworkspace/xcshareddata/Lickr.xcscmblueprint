@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7397207C00C9A37D980163BDA6690DBDDDD307E3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E1178386D07BCA95CB9284614957944AE36ADAC2" : 0,
+    "7397207C00C9A37D980163BDA6690DBDDDD307E3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F01D2018-A72F-4330-BAEC-775B9EF23110",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E1178386D07BCA95CB9284614957944AE36ADAC2" : "",
+    "7397207C00C9A37D980163BDA6690DBDDDD307E3" : "lickr-app\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Lickr",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "platforms\/ios\/Lickr.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SongHia\/lickr-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7397207C00C9A37D980163BDA6690DBDDDD307E3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SongHia\/Unconference-Git-Session.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E1178386D07BCA95CB9284614957944AE36ADAC2"
+    }
+  ]
+}
