@@ -1,0 +1,183 @@
+/* --------- custom CSS --------- */
+
+* {
+	text-decoration: none;
+	text-shadow: none;
+
+}
+
+html {
+	background-color: #FF00B0;
+}
+
+/*.app {
+    background:url(../img/animated_tongue_symbol.gif) no-repeat center top;
+	
+}*/
+
+
+
+.app h1 {
+	text-align: center;
+	font-family: hobo std, sans-serif;
+	font-size: 75px;
+	color: #fff;
+	margin: -350px auto 0 auto;
+	text-shadow: 3px 3px 15px #14C8CC;
+}
+
+.app h2 {
+	color: #fff;
+	font-size:25px;
+	font-family: hobo std, sans-serif;
+
+}
+
+.tongue {
+	width: 225px;
+}
+
+.lick-btn {
+	background-color: #14C8CC;
+    color: #fff !important;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    width: 100%;
+   	padding: 20px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+	display: block;
+	margin: 30px auto 0 auto;
+}
+
+
+
+/* --------- page 1: splash --------- */
+/*#page1 {
+	background-color: #FF00B0;
+}
+
+#page1 h1, h2 {
+	text-align: center;
+	font-family: hobo std;
+}
+
+#page1 h1 {
+	margin-top: -10px;
+	font-size: 90px;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: #14C8CC 5px 5px 5px; 
+}
+
+#page1 h2 {
+	margin-top: -5px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+#page1 img {
+	display: block;
+	margin: 0 auto;
+	width:250px;
+}
+
+#page1 a {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.start-btn {
+    background-color: #14C8CC;
+    color: #fff !important;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    padding: 16px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+	display: block;
+	width: 140px;
+	margin: 0 auto;
+}*/
+
+/* --------- page 2: how to --------- */
+/*#page2 {
+	background-color: #FF00B0;
+}
+
+#page2 h1 {
+	margin-top: -10px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: hobo std;
+	color: #fff;
+	font-size: 60px;
+}
+
+#page2 img {
+	display: block;
+	margin: 0 auto;
+}
+
+#page2 a {
+	margin-top: 30px;
+	color: #fff;
+	font-size:20px;
+}
+
+.lick-btn {
+	background-color: #14C8CC;
+    color: #fff !important;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    padding: 16px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+}
+*/
+/* --------- page 3: make a mouthie --------- */
+
+/*
+#page3 {
+  background-color: #FF00B0;
+  background: url("../img/image01_ice_cream1.png")
+  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#page3 img {
+	position: relative;
+	display: block;
+	margin: -10px auto 0 auto;
+	height: 600px;
+}
+
+#page3 h1 {
+	position: absolute;
+	text-transform: uppercase;
+	font-family: hobo std;
+	color: #fff;
+	top: 50px;
+	width: 100%;
+	right: 0;
+	text-align: center;
+}
+
+#page3 h1 span {
+	background: rgb(0, 0, 0);  
+	background: rgba(0, 0, 0, 0.7);
+	padding: 20px;
+}*/
+
+

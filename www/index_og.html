@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lickr. Intimate Media</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.css" />
+
+    <!--     Custom CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="text/javascript" src="cordova.js"></script> 
+<!--     <script type="text/javascript" src="js/VideoCapturePlus.js"></script> not needed?-->
+    <script src="jquery-2.2.0.js"></script>
+
+
+    <script>
+    // This is to get around a new security restriction in Chrome
+    $(document).bind('mobileinit', function() {
+        $.mobile.pushStateEnabled = false;
+    });
+    // It may not be needed in the end PhoneGap application
+    </script>
+
+
+    <script src="jquery.mobile-1.4.5.js"></script>
+    
+    <!-- ////////// VideoCapturePlus JavaScript Here ////////// -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/videocaptureplus-demo.js"></script>
+
+    <!-- ////////// Custom JavaScript Here ////////// -->
+    <script type="text/javascript">
+
+    function onWindowLoad() {
+        document.addEventListener('deviceready', onDeviceReady);
+    }
+
+    function onDeviceReady() {
+        $(document).on('pagecreate', function () {
+        
+        $("#page1").off("swipeleft").on("swipeleft", function () { //unbind to prevent error
+            $.mobile.changePage("#page2", { transition: "slide" });
+            console.log("swiped left");
+            });
+        });
+    }
+
+    window.addEventListener('load', onWindowLoad);
+    </script>
+</head>
+
+<body>
+    <!-- ////////// page 1: splash ////////// -->
+    <div data-role="page" id="page1">
+        <div data-role="main" class="ui-content">
+            <h1>lickr</h1>
+            <h2>intimate media</h2>
+            <img src="img/animated_tongue_symbol.gif">
+            <br />
+            <a href="#page2" data-transition="slide" class="start-btn"><---   How To</a>
+        </div>
+    </div>
+
+    <!-- ////////// page 2: intro ////////// -->
+    <div data-role="page" id="page2">
+        <div data-role="main" class="ui-content">
+            <h1>how to<h1>
+            <img src="img/How To Symbol.png">
+            <a href="#" class="lick-btn" onclick="videoCapturePlusDemo(true,true,3)">Make A Mouthie!</a>
+    
+
+            <!-- video containers -->
+            <!-- <div id="video_meta_container"></div> -->
+            <!-- <div id="video_meta_container2"></div> -->
+            <div id="video_container"></div>
+
+            <a href="#page1" data-transition="slideup">take me back</a>
+        </div>
+    </div>
+
+    <!-- ////////// page 3: make a mouthie ////////// -->
+<!--     <div data-role="page" id="page3">
+        <div data-role="main" class="ui-content">
+            <img src="img/Mouthie Symbol 2.png">
+            <h1><span>make a mouthie</span></h1>
+            <a href="#page1" data-transition="slideup">take me back</a>
+        </div>
+    </div> -->
+
+</body>
+
+</html>
