@@ -23,18 +23,20 @@ html {
 	font-size: 75px;
 	color: #fff;
 	margin: -350px auto 0 auto;
-	text-shadow: 3px 3px 15px #14C8CC;
+	text-shadow: 7px 7px 15px #14C8CC;
 }
 
 .app h2 {
 	color: #fff;
 	font-size:25px;
 	font-family: hobo std, sans-serif;
+	text-shadow: 3px 3px 15px #14C8CC;
 
 }
 
 .tongue {
 	width: 225px;
+	height: 300px;
 }
 
 .lick-btn {
@@ -51,7 +53,9 @@ html {
 	margin: 30px auto 0 auto;
 }
 
-
+#gap {
+	height: 300px
+}
 
 /* --------- page 1: splash --------- */
 /*#page1 {

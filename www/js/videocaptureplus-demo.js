@@ -6,7 +6,35 @@ var fileSystem = null;
 // Variable to hold the image URI from the camera
 var videoUri = null;
 
+var lImages = ['www/img/cameraoverlays/landscape/iceCream_landscape.png', 'www/img/cameraoverlays/landscape/macBurger_landscape.png', 'www/img/cameraoverlays/landscape/waffles_landscape.png', 'www/img/cameraoverlays/landscape/pizza_landscape.png'];
+var pImages = ['www/img/cameraoverlays/portrait/iceCream_portrait.png', 'www/img/cameraoverlays/portrait/macBurger_portrait.png', 'www/img/cameraoverlays/portrait/waffles_portrait.png', 'www/img/cameraoverlays/portrait/pizza_portrait.png'];
+
+var landscapeFile;
+var portraitFile;
+var overlaySpot = 0;
+
+function randomOverlay(){
+overlaySpot = Math.floor(Math.random()*lImages.length);
+landscapeFile = lImages[overlaySpot];
+portraitFile = pImages[overlaySpot];
+}
+
+// function randLandscape(){
+// landscapeFile = lImages[Math.floor(Math.random()*lImages.length)];
+// console.log("landscapeFile: " + landscapeFile);
+// }
+
+// function randPortrait(){
+// portraitFile = pImages[Math.floor(Math.random()*pImages.length)];
+// console.log("portraitFile: " + portraitFile);
+// }
+
 function videoCapturePlusDemo(highquality, frontcamera, duration) {
+
+randomOverlay();
+// randLandscape();
+// randPortrait();
+
   window.plugins.videocaptureplus.captureVideo(
       captureSuccess,
       captureError,
@@ -16,12 +44,30 @@ function videoCapturePlusDemo(highquality, frontcamera, duration) {
         highquality: highquality,
         frontcamera: frontcamera,
         // you'll want to sniff the useragent/device and pass the best overlay based on that.. assuming iphone here
-        portraitOverlay: 'www/img/overlay01_ice_cream',
-        // portraitOverlay: 'www/img/cameraoverlays/overlay-iPhone-portrait.png',
-        landscapeOverlay: 'www/img/cameraoverlays/overlay-iPhone-landscape.png'
+        portraitOverlay: portraitFile,
+        landscapeOverlay: landscapeFile
       }
   );
 }
+
+// function videoCapturePlusDemo(highquality, frontcamera, duration) {
+//   window.plugins.videocaptureplus.captureVideo(
+//       captureSuccess,
+//       captureError,
+//       {
+//         limit: 1,
+//         duration: duration,
+//         highquality: highquality,
+//         frontcamera: frontcamera,
+//         // you'll want to sniff the useragent/device and pass the best overlay based on that.. assuming iphone here
+//         portraitOverlay: 'www/img/cameraoverlays/icecream_vertical.png',
+//         // portraitOverlay: 'www/img/cameraoverlays/overlay-iPhone-portrait.png',
+//         landscapeOverlay: 'www/img/cameraoverlays/icecream_horizontal.png'
+//       }
+//   );
+// }
+
+
 
 function captureSuccess(mediaFiles) {
   var i, len;
@@ -56,9 +102,9 @@ function captureSuccess(mediaFiles) {
     vid.appendChild(source_vid);
     document.getElementById('video_container').innerHTML = '';
     document.getElementById('video_container').appendChild(vid);
-    document.getElementById('video_meta_container2').innerHTML = parseInt(mediaFile.size / 1000) + 'KB ' + mediaFile.type;
+    // document.getElementById('video_meta_container2').innerHTML = parseInt(mediaFile.size / 1000) + 'KB ' + mediaFile.type;
 
-    //testing other code
+    //THIS WORKS
     LibraryHelper.saveVideoToLibrary(onSuccess, onError, videoUri, "Lickr App");
 
     // 4. Request access to the file system
@@ -135,12 +181,13 @@ function captureSuccess(mediaFiles) {
 
 
 function getFormatDataSuccess(mediaFileData) {
-  document.getElementById('video_meta_container').innerHTML = mediaFileData.duration + ' seconds, ' + mediaFileData.width + ' x ' + mediaFileData.height;
+  // document.getElementById('video_meta_container').innerHTML = mediaFileData.duration + ' seconds, ' + mediaFileData.width + ' x ' + mediaFileData.height;
 }
 
 function captureError(error) {
   // code 3 = cancel by user
-  alert('Returncode: ' + JSON.stringify(error.code));
+  // alert('Returncode: ' + JSON.stringify(error.code));
+  console.log('Returncode: ' + JSON.stringify(error.code));
 }
 
 function getFormatDataError(error) {
